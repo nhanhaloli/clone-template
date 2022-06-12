@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/versus.css">
+</head>
+
+<body>
+  <a href="/">Hot or not type:</a>
+  <h1>Versus type:</h1>
+  <hr>
+  <br><br>
+  <div class="content">
+    <div class="versus">
+      <p class="count-text">Question 1 of 8</p>
+      <span class="question-progress"><span class="question-progress-bar" style="width: 12.5%;"></span></span>
+      <p class="title">Time For a Break! What Do You Think About?</p>
+      <ul class="answers-items">
+        <li class="answers-items-item">
+          <div class="answers-items-item-result">
+            <figure class="answers-items-item-result-media answer-media-versus"> <img data-expand="600"
+                src="https://bimber.bringthepixel.com/main/wp-content/uploads/sites/17/2017/10/versus-5-a-311x311.jpg">
+              <div class="anticipation"></div>
+              <span class="animation animation1">
+                <span class="loading"></span>
+              </span>
+              <div class="answer-percentage answer-percentage-lower " style="font-size:43.381884237147545px">
+                <div style="height: 98%;width: 98%;">48%</div>
+              </div>
+            </figure>
+            <div class="answers-items-item-result-label">
+              <ion-icon size="large" name="square-outline"></ion-icon>
+              <input type="radio" name="snax_question_1">
+              <div class="g1-epsilon g1-epsilon-1st answers-items-item-result-label-text"> Sweets</div>
+            </div>
+          </div>
+        </li>
+        <li class="answers-items-item">
+          <div class="answers-items-item-result">
+            <figure class="answers-items-item-result-media answer-media-versus"> <img data-expand="600"
+                src="https://bimber.bringthepixel.com/main/wp-content/uploads/sites/17/2017/10/versus-5-b-311x311.jpg">
+              <div class="anticipation"></div>
+              <span class="animation animation2">
+                <span class="loading"></span>
+              </span>
+              <div class="answer-percentage answer-percentage-higher " style="font-size:45.158745096856464px">
+                <div style="height: 102%;width: 102%;">52%</div>
+              </div>
+            </figure>
+            <div class="answers-items-item-result-label">
+              <ion-icon size="large" name="square-outline"></ion-icon>
+              <input type="radio" name="snax_question_1">
+              <div class="g1-epsilon g1-epsilon-1st answers-items-item-result-label-text"> Vegies</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    const imageContainer = $('.answers-items')
+    const result = $('.answer-percentage')
+
+    $('.answers-items-item').click(function () {
+      console.log(result.css('display'));
+      if (result.css('display') === 'none') {
+        imageContainer.addClass('show-loading')
+
+        setTimeout(() => {
+          imageContainer.removeClass('show-loading')
+          result.css('display', 'block')
+        }, 2500);
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  padding: 20px;
+}
+body .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .content .hot-or-not {
+  max-width: 622px;
+}
+body .content .hot-or-not .count-text {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+body .content .hot-or-not .question-progress {
+  display: block;
+  height: 4px;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 2px;
+  background-color: var(--g1-border-color, #e6e6e6);
+}
+body .content .hot-or-not .question-progress-bar {
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  background-color: #00b000;
+}
+body .content .hot-or-not .title {
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+body .content .hot-or-not .image-container {
+  position: relative;
+}
+body .content .hot-or-not .image-container .image {
+  width: 100%;
+}
+body .content .hot-or-not .image-container .result {
+  display: table;
+  padding: 10px 0;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  border-radius: 100px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #fff;
+  display: none;
+}
+body .content .hot-or-not .image-container .result-percentage {
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+  vertical-align: middle;
+  -webkit-transform-origin: 50% 50% 50%;
+  -moz-transform-origin: 50% 50% 50%;
+  -ms-transform-origin: 50% 50% 50%;
+  -o-transform-origin: 50% 50% 50%;
+  transform-origin: 50% 50% 50%;
+  font-size: 45.5852437991px;
+}
+body .content .hot-or-not .image-container .result-percentage div {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 80%;
+  letter-spacing: -0.025em;
+  color: #fff;
+}
+body .content .hot-or-not .image-container .result-percentage:nth-child(1) div {
+  background-color: #ff5dff;
+  height: 93.9631094979px;
+  width: 93.9631094979px;
+}
+body .content .hot-or-not .image-container .result-percentage:nth-child(2) div {
+  background-color: #5dd3ff;
+  height: 87.301251351px;
+  width: 87.301251351px;
+}
+body .content .hot-or-not .image-container.show-loading .animation {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .content .hot-or-not .image-container.show-loading .animation.animation1 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-110%, -50%);
+}
+body .content .hot-or-not .image-container.show-loading .animation.animation1 .loading {
+  animation-name: resize;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background: white;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+}
+body .content .hot-or-not .image-container.show-loading .animation.animation2 {
+  top: 50%;
+  right: 50%;
+  transform: translate(110%, -50%);
+}
+body .content .hot-or-not .image-container.show-loading .animation.animation2 .loading {
+  animation-name: resize;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background: white;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+}
+@keyframes resize {
+  0% {
+    height: 10px;
+    width: 10px;
+  }
+  50% {
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    height: 10px;
+    width: 10px;
+  }
+}
+body .content .hot-or-not .answers-title {
+  padding-top: 12px;
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+body .content .hot-or-not .answers-items {
+  padding: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+body .content .hot-or-not .answers-items .answers-item {
+  padding: 6px;
+  width: 50%;
+}
+body .content .hot-or-not .answers-items .answers-item .answer {
+  background-color: #ff5dff;
+  position: relative;
+  border-radius: 4px;
+  transition: border-color 375ms ease-in-out, background-color 375ms ease-in-out, color 375ms ease-in-out, box-shadow 375ms ease-in-out;
+}
+body .content .hot-or-not .answers-items .answers-item .answer-label {
+  text-align: center;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .content .hot-or-not .answers-items .answers-item .answer-label input[type=radio] {
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+body .content .hot-or-not .answers-items .answers-item .answer-label ion-icon {
+  color: white;
+}
+body .content .hot-or-not .answers-items .answers-item .answer:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+body .content .hot-or-not .answers-items .answers-item:nth-child(2) .answer {
+  background-color: #5dd3ff;
+}
+
+/*# sourceMappingURL=style.css.map */

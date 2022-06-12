@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <a href="/versus.html">Versus type:</a>
+  <h1>Hot ot Not type:</h1>
+  <hr>
+  <br><br>
+  <div class="content">
+    <div class="hot-or-not">
+      <p class="count-text">Question 1 of 8</p>
+      <span class="question-progress">
+        <span class="question-progress-bar" style="width: 12.5%;"></span>
+      </span>
+      <h2 class="title">Letters From Silence</h2>
+      <div class="image-container">
+        <img class="image" src="https://bimber.bringthepixel.com/main/wp-content/uploads/sites/17/2017/10/binary-2.jpg"
+          alt="background question image">
+        <div class="result">
+          <div class="result-percentage" style="font-size:45.585243799144386px;">
+            <div style="height:93.96310949786097px;width:93.96310949786097px;">53%</div>
+          </div>
+          <div class="result-percentage" style="font-size:42.92050054039093px;">
+            <div style="height:87.30125135097734px;width:87.30125135097734px;">47%</div>
+          </div>
+        </div>
+        <span class="animation animation1">
+          <span class="loading"></span>
+        </span>
+        <span class="animation animation2">
+          <span class="loading"></span>
+        </span>
+      </div>
+      <p class="answers-title">TELL US WHAT YOU THINK:</p>
+      <ul class="answers-items">
+        <li class="answers-item">
+          <div class="answer">
+            <div class="answer-label">
+              <ion-icon size="large" name="heart-outline"></ion-icon>
+              <input type="radio" name="snax_question_1">
+            </div>
+          </div>
+        </li>
+        <li class="answers-item">
+          <div class="answer">
+            <div class="answer-label">
+              <ion-icon size="large" name="close-outline"></ion-icon>
+              <input type="radio" name="snax_question_2">
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    const imageContainer = $('.image-container')
+    const result = $('.result')
+
+    $('.answer-label').click(function () {
+      if (result.css('display') === 'none') {
+        imageContainer.addClass('show-loading')
+
+        setTimeout(() => {
+          imageContainer.removeClass('show-loading')
+          result.css('display', 'block')
+        }, 2500);
+      }
+    })
+  </script>
+</body>
+
+</html>
