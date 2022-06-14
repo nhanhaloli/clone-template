@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/avatar/avatar.css">
+</head>
+
+<body>
+  <ul class="menu">
+    <li><a href="/choosen-type/classic.html">Classic type</a></li>
+    <li><a href="/choosen-type/versus.html">Versus type</a></li>
+    <li><a href="/choosen-type/hot-or-not.html">Hot or not type</a></li>
+    <hr>
+    <li><a class="active">Avatar</a></li>
+  </ul>
+  <div class="content">
+    <div class="canvas-avatar">
+      <canvas width="164" height="164" class="hexagon"></canvas>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    const canvas = $('.hexagon')
+    const ctx = canvas[0].getContext('2d');
+
+    const a = 2 * Math.PI / 6;
+    const r = 82;
+
+    function drawHexagon(x, y) {
+      ctx.beginPath();
+      for (var i = 0; i < 6; i++) {
+        ctx.lineTo(x + r * Math.cos(a * i), y + r * Math.sin(a * i));
+      }
+      ctx.fillStyle = 'red'
+      ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+      ctx.closePath();
+      ctx.stroke();
+    }
+
+    function init() {
+      drawHexagon(r, r)
+    }
+    init();
+  </script>
+</body>
+
+</html>
