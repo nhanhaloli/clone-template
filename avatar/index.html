@@ -18,37 +18,130 @@
     <li><a class="active">Avatar</a></li>
   </ul>
   <div class="content">
-    <div class="canvas-avatar">
-      <canvas width="164" height="164" class="hexagon"></canvas>
+    <figure class="profile-header-cover">
+    </figure>
+    <div class="profile-info">
+      <div class="avatar">
+        <div class="avatar__border">
+          <div class="hexagon-148-164"></div>
+        </div>
+        <div class="avatar__content">
+          <div class="hexagon-image-100-110" data-src="../img/avatar/01.jpg"></div>
+        </div>
+        <div class="avatar__progress">
+          <div class="hexagon-progress-124-136"></div>
+        </div>
+        <div class="avatar__progress--border">
+          <div class="hexagon-border-124-136"></div>
+        </div>
+        <div class="avatar__badge">
+          <div class="avatar__badge--border">
+            <div class="hexagon-40-44"></div>
+          </div>
+          <div class="avatar__badge--content">
+            <div class="hexagon-dark-32-34"></div>
+          </div>
+          <p class="avatar__badge--text">24</p>
+        </div>
+      </div>
+      <p class="user-short-description-title"><a href="profile-timeline.html">Marina Valentine</a></p>
+      <p class="user-short-description-text"><a href="#">www.gamehuntress.com</a></p>
+      <div class="user-stats">
+        <div class="user-stat big">
+          <p class="user-stat-title">930</p>
+          <p class="user-stat-text">posts</p>
+        </div>
+        <div class="user-stat big">
+          <p class="user-stat-title">82</p>
+          <p class="user-stat-text">friends</p>
+        </div>
+        <div class="user-stat big">
+          <p class="user-stat-title">5.7k</p>
+          <p class="user-stat-text">visits</p>
+        </div>
+        <div class="user-stat big">
+          <img class="user-stat-image" src="../img/flag/usa.png" alt="flag-usa">
+          <p class="user-stat-text">usa</p>
+        </div>
+      </div>
     </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="../vendor/xm_hexagon.min.js"></script>
 
   <script>
-    const canvas = $('.hexagon')
-    const ctx = canvas[0].getContext('2d');
+    const existsInDOM = function (selector) {
+      return document.querySelectorAll(selector).length;
+    }
 
-    const a = 2 * Math.PI / 6;
-    const r = 82;
-
-    function drawHexagon(x, y) {
-      ctx.beginPath();
-      for (var i = 0; i < 6; i++) {
-        ctx.lineTo(x + r * Math.cos(a * i), y + r * Math.sin(a * i));
+    const createHexagon = function (options) {
+      if (existsInDOM(options.container) || typeof options.containerElement !== 'undefined') {
+        return new XM_Hexagon(options);
       }
-      ctx.fillStyle = 'red'
-      ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
-      ctx.closePath();
-      ctx.stroke();
     }
 
-    function init() {
-      drawHexagon(r, r)
-    }
-    init();
+    createHexagon({
+      container: '.hexagon-148-164',
+      width: 148,
+      height: 164,
+      roundedCorners: true,
+      fill: true
+    });
+
+    createHexagon({
+      container: '.hexagon-image-100-110',
+      width: 100,
+      height: 110,
+      roundedCorners: true,
+      clip: true
+    });
+
+    createHexagon({
+      container: '.hexagon-progress-124-136',
+      width: 124,
+      height: 136,
+      lineWidth: 8,
+      roundedCorners: true,
+      gradient: {
+        colors: ['#41efff', '#615dfa']
+      },
+      scale: {
+        start: 0,
+        end: 1,
+        stop: .74
+      }
+    });
+
+    createHexagon({
+      container: '.hexagon-border-124-136',
+      width: 124,
+      height: 136,
+      lineWidth: 8,
+      roundedCorners: true,
+      lineColor: '#e7e8ee'
+    });
+
+    createHexagon({
+      container: '.hexagon-40-44',
+      width: 40,
+      height: 44,
+      roundedCorners: true,
+      roundedCornerRadius: 1,
+      fill: true
+    });
+
+    createHexagon({
+      container: '.hexagon-dark-32-34',
+      width: 32,
+      height: 34,
+      roundedCorners: true,
+      roundedCornerRadius: 1,
+      lineColor: '#45437f',
+      fill: true
+    });
   </script>
 </body>
 

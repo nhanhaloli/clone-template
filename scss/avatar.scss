@@ -38,13 +38,165 @@
 .content {
   margin-left: 200px;
   height: 100vh;
+  padding: 50px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .profile-header-cover {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 300px;
+    width: 100%;
+    background: url(/img/cover/01.jpg) center center / cover no-repeat;
+  }
 
-  canvas {
-    display: block;
-    margin: 0 auto;
+  .profile-info {
+    position: relative;
+
+    .avatar {
+      position: absolute;
+      top: -116px;
+      margin-left: -74px;
+      width: 148px;
+      height: 164px;
+      left: 50%;
+
+      &__border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      &__content {
+        position: absolute;
+        top: 27px;
+        left: 24px;
+        z-index: 3;
+      }
+
+      &__progress {
+        position: absolute;
+        z-index: 3;
+        top: 14px;
+        left: 12px;
+      }
+
+      &__progress--border {
+        position: absolute;
+        z-index: 2;
+        top: 14px;
+        left: 12px;
+      }
+
+      &__badge {
+        width: 40px;
+        height: 44px;
+        top: 102px;
+        right: 8px;
+        position: absolute;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--border {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 4;
+        }
+
+        &--content {
+          top: 5px;
+          left: 4px;
+          position: absolute;
+          z-index: 5;
+        }
+
+        &--text {
+          color: #fff;
+          font-size: 1rem;
+          font-weight: 700;
+          pointer-events: none;
+          position: relative;
+          z-index: 6;
+        }
+      }
+    }
+
+    .user-short-description-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1em;
+      padding-top: 52px;
+
+      a {
+        color: #3e3f5e;
+        font-weight: 700;
+        background-color: transparent;
+        text-decoration: none;
+      }
+    }
+
+    .user-short-description-text {
+      font-size: .75rem;
+      margin-top: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+
+      a {
+        color: #adafca;
+        font-weight: 700;
+        background-color: transparent;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .user-stats {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 54px;
+    left: 40px;
+
+    .user-stat {
+      position: relative;
+
+      &-title {
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        color: #3e3f5e;
+      }
+
+      &-text {
+        margin-top: 10px;
+        color: #adafca;
+      }
+
+      &-image {
+        display: block;
+        width: 24px;
+        height: 16px;
+      }
+
+      &.big {
+        padding: 0 30px;
+
+        .user-stat-text {
+          font-size: .75rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1365px) {
+      position: static;
+      margin-top: 40px;
+    }
   }
 }
