@@ -8,18 +8,42 @@
   -webkit-font-smoothing: antialiased;
 }
 
-body {
-  padding: 20px;
+.menu {
+  position: fixed;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #f1f1f1;
 }
-body .content {
+.menu li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.menu li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.menu li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.content {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-body .content .hot-or-not {
+.content--hotOrNot {
   max-width: 622px;
 }
-body .content .hot-or-not .count-text {
+.content--hotOrNot .count-text {
   display: block;
   margin-bottom: 6px;
   font-size: 12px;
@@ -27,7 +51,7 @@ body .content .hot-or-not .count-text {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-body .content .hot-or-not .question-progress {
+.content--hotOrNot .question-progress {
   display: block;
   height: 4px;
   margin-bottom: 10px;
@@ -35,7 +59,7 @@ body .content .hot-or-not .question-progress {
   border-radius: 2px;
   background-color: var(--g1-border-color, #e6e6e6);
 }
-body .content .hot-or-not .question-progress-bar {
+.content--hotOrNot .question-progress-bar {
   position: absolute;
   left: 0;
   right: auto;
@@ -45,18 +69,18 @@ body .content .hot-or-not .question-progress-bar {
   border-bottom-left-radius: inherit;
   background-color: #00b000;
 }
-body .content .hot-or-not .title {
+.content--hotOrNot .title {
   font-weight: bold;
   font-size: 23px;
   margin-bottom: 20px;
 }
-body .content .hot-or-not .image-container {
+.content--hotOrNot .image-container {
   position: relative;
 }
-body .content .hot-or-not .image-container .image {
+.content--hotOrNot .image-container .image {
   width: 100%;
 }
-body .content .hot-or-not .image-container .result {
+.content--hotOrNot .image-container .result {
   display: table;
   padding: 10px 0;
   margin: auto;
@@ -73,7 +97,7 @@ body .content .hot-or-not .image-container .result {
   background: #fff;
   display: none;
 }
-body .content .hot-or-not .image-container .result-percentage {
+.content--hotOrNot .image-container .result-percentage {
   display: inline-block;
   margin: 0 10px;
   position: relative;
@@ -85,7 +109,7 @@ body .content .hot-or-not .image-container .result-percentage {
   transform-origin: 50% 50% 50%;
   font-size: 45.5852437991px;
 }
-body .content .hot-or-not .image-container .result-percentage div {
+.content--hotOrNot .image-container .result-percentage div {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -101,17 +125,17 @@ body .content .hot-or-not .image-container .result-percentage div {
   letter-spacing: -0.025em;
   color: #fff;
 }
-body .content .hot-or-not .image-container .result-percentage:nth-child(1) div {
+.content--hotOrNot .image-container .result-percentage:nth-child(1) div {
   background-color: #ff5dff;
   height: 93.9631094979px;
   width: 93.9631094979px;
 }
-body .content .hot-or-not .image-container .result-percentage:nth-child(2) div {
+.content--hotOrNot .image-container .result-percentage:nth-child(2) div {
   background-color: #5dd3ff;
   height: 87.301251351px;
   width: 87.301251351px;
 }
-body .content .hot-or-not .image-container.show-loading .animation {
+.content--hotOrNot .image-container.show-loading .animation {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -119,12 +143,12 @@ body .content .hot-or-not .image-container.show-loading .animation {
   align-items: center;
   justify-content: center;
 }
-body .content .hot-or-not .image-container.show-loading .animation.animation1 {
+.content--hotOrNot .image-container.show-loading .animation.animation1 {
   top: 50%;
   left: 50%;
   transform: translate(-110%, -50%);
 }
-body .content .hot-or-not .image-container.show-loading .animation.animation1 .loading {
+.content--hotOrNot .image-container.show-loading .animation.animation1 .loading {
   animation-name: resize;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -134,12 +158,12 @@ body .content .hot-or-not .image-container.show-loading .animation.animation1 .l
   display: block;
   border-radius: 50%;
 }
-body .content .hot-or-not .image-container.show-loading .animation.animation2 {
+.content--hotOrNot .image-container.show-loading .animation.animation2 {
   top: 50%;
   right: 50%;
   transform: translate(110%, -50%);
 }
-body .content .hot-or-not .image-container.show-loading .animation.animation2 .loading {
+.content--hotOrNot .image-container.show-loading .animation.animation2 .loading {
   animation-name: resize;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -163,7 +187,7 @@ body .content .hot-or-not .image-container.show-loading .animation.animation2 .l
     width: 10px;
   }
 }
-body .content .hot-or-not .answers-title {
+.content--hotOrNot .answers-title {
   padding-top: 12px;
   margin: 0;
   text-align: center;
@@ -172,45 +196,45 @@ body .content .hot-or-not .answers-title {
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
-body .content .hot-or-not .answers-items {
+.content--hotOrNot .answers-items {
   padding: 6px;
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
 }
-body .content .hot-or-not .answers-items .answers-item {
+.content--hotOrNot .answers-items .answers-item {
   padding: 6px;
   width: 50%;
 }
-body .content .hot-or-not .answers-items .answers-item .answer {
+.content--hotOrNot .answers-items .answers-item .answer {
   background-color: #ff5dff;
   position: relative;
   border-radius: 4px;
   transition: border-color 375ms ease-in-out, background-color 375ms ease-in-out, color 375ms ease-in-out, box-shadow 375ms ease-in-out;
 }
-body .content .hot-or-not .answers-items .answers-item .answer-label {
+.content--hotOrNot .answers-items .answers-item .answer-label {
   text-align: center;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-body .content .hot-or-not .answers-items .answers-item .answer-label input[type=radio] {
+.content--hotOrNot .answers-items .answers-item .answer-label input[type=radio] {
   clip: rect(1px, 1px, 1px, 1px);
   width: 1px;
   height: 1px;
   overflow: hidden;
   position: absolute;
 }
-body .content .hot-or-not .answers-items .answers-item .answer-label ion-icon {
+.content--hotOrNot .answers-items .answers-item .answer-label ion-icon {
   color: white;
 }
-body .content .hot-or-not .answers-items .answers-item .answer:hover {
+.content--hotOrNot .answers-items .answers-item .answer:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-body .content .hot-or-not .answers-items .answers-item:nth-child(2) .answer {
+.content--hotOrNot .answers-items .answers-item:nth-child(2) .answer {
   background-color: #5dd3ff;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=hotOrNot.css.map */
