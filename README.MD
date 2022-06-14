@@ -1,3 +1,5 @@
 ## How to run
 
-run *index.html* file
+run **.html** file in any folder
+
+You can routing when open our file !
