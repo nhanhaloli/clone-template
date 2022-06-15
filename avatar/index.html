@@ -42,7 +42,7 @@
           <div class="avatar__badge--content">
             <div class="hexagon-dark-32-34"></div>
           </div>
-          <p class="avatar__badge--text">24</p>
+          <p class="avatar__badge--text">25</p>
         </div>
       </div>
       <p class="user-short-description-title"><a href="profile-timeline.html">Marina Valentine</a></p>
@@ -138,7 +138,7 @@
                 <div class="user-avatar-badge-content">
                   <div class="hexagon-dark-26-28"></div>
                 </div>
-                <p class="user-avatar-badge-text">12</p>
+                <p class="user-avatar-badge-text">50</p>
               </div>
             </div>
             <p class="user-short-description-title"><a href="#">NekoBebop</a></p>
@@ -224,7 +224,7 @@
                 <div class="hexagon-image-82-90" data-src="../img/avatar/02.jpg"></div>
               </div>
               <div class="user-avatar-progress">
-                <div class="hexagon-progress-100-110"></div>
+                <div class="hexagon-progress-100-110-75"></div>
               </div>
               <div class="user-avatar-progress-border">
                 <div class="hexagon-border-100-110"></div>
@@ -236,7 +236,7 @@
                 <div class="user-avatar-badge-content">
                   <div class="hexagon-dark-26-28"></div>
                 </div>
-                <p class="user-avatar-badge-text">12</p>
+                <p class="user-avatar-badge-text">75</p>
               </div>
             </div>
             <p class="user-short-description-title"><a href="#">NekoBebop</a></p>
@@ -322,7 +322,7 @@
                 <div class="hexagon-image-82-90" data-src="../img/avatar/03.jpg"></div>
               </div>
               <div class="user-avatar-progress">
-                <div class="hexagon-progress-100-110"></div>
+                <div class="hexagon-progress-100-110-100"></div>
               </div>
               <div class="user-avatar-progress-border">
                 <div class="hexagon-border-100-110"></div>
@@ -334,7 +334,7 @@
                 <div class="user-avatar-badge-content">
                   <div class="hexagon-dark-26-28"></div>
                 </div>
-                <p class="user-avatar-badge-text">12</p>
+                <p class="user-avatar-badge-text">100</p>
               </div>
             </div>
             <p class="user-short-description-title"><a href="#">NekoBebop</a></p>
@@ -456,7 +456,7 @@
       scale: {
         start: 0,
         end: 1,
-        stop: .74
+        stop: .25
       }
     });
 
@@ -517,7 +517,39 @@
       scale: {
         start: 0,
         end: 1,
-        stop: .74
+        stop: .5
+      }
+    });
+
+    createHexagon({
+      container: '.hexagon-progress-100-110-75',
+      width: 100,
+      height: 110,
+      lineWidth: 8,
+      roundedCorners: true,
+      gradient: {
+        colors: ['#41efff', '#615dfa']
+      },
+      scale: {
+        start: 0,
+        end: 1,
+        stop: .75
+      }
+    });
+
+    createHexagon({
+      container: '.hexagon-progress-100-110-100',
+      width: 100,
+      height: 110,
+      lineWidth: 8,
+      roundedCorners: true,
+      gradient: {
+        colors: ['#41efff', '#615dfa']
+      },
+      scale: {
+        start: 0,
+        end: 1,
+        stop: 1
       }
     });
 
