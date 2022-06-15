@@ -33,6 +33,10 @@
     background-color: #555;
     color: white;
   }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 .content {
@@ -42,6 +46,11 @@
   margin-left: 200px;
   padding-top: 50px;
   padding-bottom: 50px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+    padding: 50px 0;
+  }
 
   &--hotOrNot {
     max-width: 622px;
