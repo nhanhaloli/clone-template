@@ -192,11 +192,77 @@
           font-size: .75rem;
         }
       }
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 20px;
+        background-color: #eaeaf5;
+        position: absolute;
+        top: 6px;
+        right: 0;
+      }
+
+      &:last-child {
+        &::after {
+          content: none;
+        }
+      }
     }
 
     @media screen and (max-width: 1365px) {
       position: static;
       margin-top: 40px;
+    }
+  }
+
+  .profile-header-social-links-wrap {
+    width: 280px;
+    height: 44px;
+    margin: 0 auto;
+    position: absolute;
+    top: 54px;
+    right: 32px;
+
+    .profile-header-social-links {
+      padding-top: 4px;
+      position: relative;
+      z-index: 2;
+
+      .profile-header-social-link {
+        display: inline-block;
+        width: 52px;
+        padding-right: 12px;
+
+        .badge-item {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -ms-flex-align: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 10px;
+          transition: -webkit-transform .2s ease-in-out;
+          transition: transform .2s ease-in-out;
+          transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+
+          img {
+            width: 100%;
+          }
+
+          &:hover {
+            transform: translateY(-4px);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1365px) {
+      position: static;
+      margin-top: 32px;
     }
   }
 }

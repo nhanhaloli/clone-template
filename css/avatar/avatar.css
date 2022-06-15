@@ -170,10 +170,67 @@
 .content .user-stats .user-stat.big .user-stat-text {
   font-size: 0.75rem;
 }
+.content .user-stats .user-stat::after {
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: #eaeaf5;
+  position: absolute;
+  top: 6px;
+  right: 0;
+}
+.content .user-stats .user-stat:last-child::after {
+  content: none;
+}
 @media screen and (max-width: 1365px) {
   .content .user-stats {
     position: static;
     margin-top: 40px;
+  }
+}
+.content .profile-header-social-links-wrap {
+  width: 280px;
+  height: 44px;
+  margin: 0 auto;
+  position: absolute;
+  top: 54px;
+  right: 32px;
+}
+.content .profile-header-social-links-wrap .profile-header-social-links {
+  padding-top: 4px;
+  position: relative;
+  z-index: 2;
+}
+.content .profile-header-social-links-wrap .profile-header-social-links .profile-header-social-link {
+  display: inline-block;
+  width: 52px;
+  padding-right: 12px;
+}
+.content .profile-header-social-links-wrap .profile-header-social-links .profile-header-social-link .badge-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.content .profile-header-social-links-wrap .profile-header-social-links .profile-header-social-link .badge-item img {
+  width: 100%;
+}
+.content .profile-header-social-links-wrap .profile-header-social-links .profile-header-social-link .badge-item:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+@media screen and (max-width: 1365px) {
+  .content .profile-header-social-links-wrap {
+    position: static;
+    margin-top: 32px;
   }
 }
 
