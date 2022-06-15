@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/avatar/avatar.css">
+</head>
+
+<body>
+  <ul class="menu">
+    <li><a href="/choosen-type/classic.html">Classic type</a></li>
+    <li><a href="/choosen-type/versus.html">Versus type</a></li>
+    <li><a href="/choosen-type/hot-or-not.html">Hot or not type</a></li>
+    <hr>
+    <li><a class="active">Avatar</a></li>
+  </ul>
+  <div class="content">
+    <figure class="profile-header-cover">
+    </figure>
+    <div class="profile-info">
+      <div class="avatar">
+        <div class="avatar__border">
+          <div class="hexagon-148-164"></div>
+        </div>
+        <div class="avatar__content">
+          <div class="hexagon-image-100-110" data-src="../img/avatar/01.jpg"></div>
+        </div>
+        <div class="avatar__progress">
+          <div class="hexagon-progress-124-136"></div>
+        </div>
+        <div class="avatar__progress--border">
+          <div class="hexagon-border-124-136"></div>
+        </div>
+        <div class="avatar__badge">
+          <div class="avatar__badge--border">
+            <div class="hexagon-40-44"></div>
+          </div>
+          <div class="avatar__badge--content">
+            <div class="hexagon-dark-32-34"></div>
+          </div>
+          <p class="avatar__badge--text">24</p>
+        </div>
+      </div>
+      <p class="user-short-description-title"><a href="profile-timeline.html">Marina Valentine</a></p>
+      <p class="user-short-description-text"><a href="#">www.gamehuntress.com</a></p>
+      <div class="profile-header-social-links-wrap">
+        <div id="profile-header-social-links-slider" class="profile-header-social-links">
+          <div class="profile-header-social-link">
+            <div class="badge-item">
+              <img src="../img/badge/gold-s.png" alt="badge-gold-s">
+            </div>
+          </div>
+          <div class="profile-header-social-link">
+            <div class="badge-item">
+              <img src="../img/badge/gold-s.png" alt="badge-gold-s">
+            </div>
+          </div>
+          <div class="profile-header-social-link">
+            <div class="badge-item">
+              <img src="../img/badge/gold-s.png" alt="badge-gold-s">
+            </div>
+          </div>
+          <div class="profile-header-social-link">
+            <div class="badge-item">
+              <img src="../img/badge/gold-s.png" alt="badge-gold-s">
+            </div>
+          </div>
+          <div class="profile-header-social-link">
+            <div class="badge-item">
+              <img src="../img/badge/gold-s.png" alt="badge-gold-s">
+            </div>
+          </div>
+        </div>
+        <div id="profile-header-social-links-slider-controls" class="slider-controls">
+          <div class="slider-control left">
+            <svg class="slider-control-icon icon-small-arrow">
+              <use xlink:href="#svg-small-arrow"></use>
+            </svg>
+          </div>
+          <div class="slider-control right">
+            <svg class="slider-control-icon icon-small-arrow">
+              <use xlink:href="#svg-small-arrow"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="user-stats">
+        <div class="user-stat big">
+          <p class="user-stat-title">930</p>
+          <p class="user-stat-text">posts</p>
+        </div>
+        <div class="user-stat big">
+          <p class="user-stat-title">82</p>
+          <p class="user-stat-text">friends</p>
+        </div>
+        <div class="user-stat big">
+          <p class="user-stat-title">5.7k</p>
+          <p class="user-stat-text">visits</p>
+        </div>
+        <div class="user-stat big">
+          <img class="user-stat-image" src="../img/flag/usa.png" alt="flag-usa">
+          <p class="user-stat-text">usa</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="../vendor/xm_hexagon.min.js"></script>
+
+  <script>
+    const existsInDOM = function (selector) {
+      return document.querySelectorAll(selector).length;
+    }
+
+    const createHexagon = function (options) {
+      if (existsInDOM(options.container) || typeof options.containerElement !== 'undefined') {
+        return new XM_Hexagon(options);
+      }
+    }
+
+    createHexagon({
+      container: '.hexagon-148-164',
+      width: 148,
+      height: 164,
+      roundedCorners: true,
+      fill: true
+    });
+
+    createHexagon({
+      container: '.hexagon-image-100-110',
+      width: 100,
+      height: 110,
+      roundedCorners: true,
+      clip: true
+    });
+
+    createHexagon({
+      container: '.hexagon-progress-124-136',
+      width: 124,
+      height: 136,
+      lineWidth: 8,
+      roundedCorners: true,
+      gradient: {
+        colors: ['#41efff', '#615dfa']
+      },
+      scale: {
+        start: 0,
+        end: 1,
+        stop: .74
+      }
+    });
+
+    createHexagon({
+      container: '.hexagon-border-124-136',
+      width: 124,
+      height: 136,
+      lineWidth: 8,
+      roundedCorners: true,
+      lineColor: '#e7e8ee'
+    });
+
+    createHexagon({
+      container: '.hexagon-40-44',
+      width: 40,
+      height: 44,
+      roundedCorners: true,
+      roundedCornerRadius: 1,
+      fill: true
+    });
+
+    createHexagon({
+      container: '.hexagon-dark-32-34',
+      width: 32,
+      height: 34,
+      roundedCorners: true,
+      roundedCornerRadius: 1,
+      lineColor: '#45437f',
+      fill: true
+    });
+  </script>
+</body>
+
+</html>
