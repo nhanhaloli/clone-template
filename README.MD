@@ -1,5 +1,7 @@
 ## How to run
 
-run **.html** file in any folder
+*cd avatar*
 
-You can routing when open our file !
+run *index.html* file
+
+You can routing when open that file !
